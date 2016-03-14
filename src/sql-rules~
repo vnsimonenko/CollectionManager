@@ -1,0 +1,26 @@
+select:
+1. select column-expr from from-expr [[where where-expr] | [order-by order-expr]]
+
+column-expr:
+1. table-name.column-name | table-alias.column-name | column-name 
+2. column-expr [, column-expr]
+
+from-expr:
+1. table-expr [, table-expr]
+
+table-expr:
+1. table-name | table-name table-alias
+
+where-expr:
+1. [(] where-expr1 [ or|and where-expr1] [)]
+
+where-expr1:
+1. [(] column-expr[[+]] <|<=|>|>= column-expr[[+]] [)]
+
+order-expr:
+1. column asc|desc [, order-expr]
+
+animal flex 44
+
+
+
